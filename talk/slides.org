@@ -1,0 +1,186 @@
+#+title: Intro to GDB 
+#+author: Annamalai N
+
+#+REVEAL_ROOT: https://cdn.jsdelivr.net/npm/reveal.js
+#+REVEAL_PLUGINS: (highlight)
+#+REVEAL_HLEVEL: 2
+#+REVEAL_THEME: serif
+#+REVEAL_MARGIN: 0.04
+#+REVEAL_MIN_SCALE: 0.2
+#+REVEAL_MAX_SCALE: 2.0
+#+REVEAL_INIT_OPTIONS: slideNumber:true
+#+OPTIONS: timestamp:nil toc:1 num:nil
+
+* Debugging
+** What is Debugging ?
+
+[[./assets/debugging1.jpg]]
+
+** What is a Debugger ?
+
+a tool, to test and debug programs by providing an interface to inspect and manage program execution.
+
+- Functions of a Debugger:
+
+    - *Breakpoints*: Pause execution at specific points to inspect the state.
+    - *Step Through Code*: Execute code line by line to monitor behavior.
+    - *View Variables*: Inspect and change variable values in real-time.
+    - *Call Stack Inspection*: View the order of function calls leading to the current state.
+
+** Debuggers in C ?
+
+[[./assets/gnu_mascot.png]]
+- Popular Debugger:
+  - GDB (GNU Debugger)
+    
+- Other Debuggers for C:
+    - LLDB: Similar to GDB, developed by LLVM project.
+    - Microsoft Visual Studio Debugger: Common in Windows environments.
+
+** Debuggers in other languages ?
+
+- Python:
+
+    - PDB (Python Debugger) 
+    - PyCharm Debugger: Part of PyCharm IDE
+
+- JavaScript:
+
+    - Chrome DevTools
+    - Node.js Debugger
+
+** GDB
+
+GDB, the GNU Project debugger
+
+[[./assets/archer.svg]]
+
+What Languages does GDB Support?
+Assembly, C, C++, Go, Fortran, etc
+
+* Let's use GDB (Demo)
+
+Click *[[https://github.com/RaMathuZen/gdb_beej_tamil/blob/main/gdb_ta.md][here]]* , to view the Beej's GDB guide in Tamil.
+
+** loading executables
+
+#+ATTR_REVEAL: :code_attribs data-line-numbers='1|3'
+#+BEGIN_SRC shell
+  $ gcc -g hello.c -o hello
+
+  (gdb)  file hello
+
+  (gdb)  r
+
+#+END_SRC
+
+** breakpoints
+
+#+ATTR_REVEAL: :code_attribs data-line-numbers='1|3'
+#+BEGIN_SRC shell
+  (gdb)  b main
+
+  (gdb)  delete 1
+
+#+END_SRC
+
+** stepping around
+
+#+ATTR_REVEAL: :code_attribs data-line-numbers='1|3'
+#+BEGIN_SRC shell
+  (gdb)  s
+
+  (gdb)  n
+
+  (gdb)  c
+
+#+END_SRC
+
+** examining variables
+
+#+ATTR_REVEAL: :code_attribs data-line-numbers='1|3'
+#+BEGIN_SRC shell
+  (gdb)  disp sz
+
+  (gdb)  info display
+
+  (gdb)  undisplay sz
+
+  (gdb)  print sz
+
+  (gdb)  printf "%d\n", sz
+
+#+END_SRC
+
+** misc stuff
+*** Stack Manipulation
+
+#+ATTR_REVEAL: :code_attribs data-line-numbers='1|3'
+#+BEGIN_SRC shell
+  (gdb)  bt
+
+  (gdb)  help stack
+
+  (gdb)  undisplay sz
+
+#+END_SRC
+
+*** Additional Stepping Methods
+
+#+ATTR_REVEAL: :code_attribs data-line-numbers='1|3'
+#+BEGIN_SRC shell
+  (gdb)  finish
+
+  (gdb)  help stack
+
+  (gdb)  undisplay sz
+
+  (gdb)  advance
+
+#+END_SRC
+
+*** jump & advance
+
+#+ATTR_REVEAL: :code_attribs data-line-numbers='1|3'
+#+BEGIN_SRC shell
+
+  (gdb)  jump
+
+#+END_SRC
+
+*** Changing Variables and Values at runtime
+
+#+ATTR_REVEAL: :code_attribs data-line-numbers='1|3'
+#+BEGIN_SRC shell
+
+  (gdb)  set variable 
+
+#+END_SRC
+
+*** Hardware Watchpoints
+
+#+ATTR_REVEAL: :code_attribs data-line-numbers='1|3'
+#+BEGIN_SRC shell
+
+  (gdb)  watch
+
+#+END_SRC
+
+** For more info
+
+Refer *man gdb* in  your system.
+
+*[[https://www.gnu.org/software/ddd/][Display Data Debugger (DDD)]]*
+
+* Thank you
+
+** Request
+
+- Please report any mistakes or issues in the *[[https://github.com/RaMathuZen/gdb_beej_tamil/blob/main/gdb_ta.md][GDB translation]]* to me or raise an issue there.
+
+- Also you can contribute more by translating *[[https://github.com/KaniyamFoundation/ProjectIdeas/issues/218][other Beej's books as well]]* as well ! (Thanks to him)
+
+
+
+
+

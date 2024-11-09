@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>Intro to GDB</title>
+<meta name="author" content="Annamalai N"/>
+<meta name="description" content=""/>
+<meta name="keywords" content=""/>
+<style type="text/css">
+.underline { text-decoration: underline; }
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/reveal.css"/>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/theme/serif.css" id="theme"/>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/plugin/highlight/zenburn.css"/>
+<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+<script>
+    if( window.location.search.match( /print-pdf/gi ) ) {
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = 'https://cdn.jsdelivr.net/npm/reveal.js/css/print/pdf.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+    }
+</script>
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+<section id="sec-title-slide"><h1 class="title">Intro to GDB</h1><p class="subtitle"></p>
+<h2 class="author">Annamalai N</h2>
+</section>
+<section id="sec-table-of-contents"><div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#/slide-orga8463f6">Debugging</a></li>
+<li><a href="#/slide-org83a63d8">Let's use GDB (Demo)</a></li>
+<li><a href="#/slide-org60eefea">Thank you</a></li>
+</ul>
+</div>
+</div>
+</section>
+
+<section>
+<section id="slide-orga8463f6">
+<h2 id="orga8463f6">Debugging</h2>
+<div class="outline-text-2" id="text-orga8463f6">
+</div>
+</section>
+</section>
+<section>
+<section id="slide-org1a89473">
+<h3 id="org1a89473">What is Debugging ?</h3>
+
+<div id="orgc259024" class="figure">
+<p><img src="./assets/debugging1.jpg" alt="debugging1.jpg" />
+</p>
+</div>
+
+</section>
+</section>
+<section>
+<section id="slide-org452ebc7">
+<h3 id="org452ebc7">What is a Debugger ?</h3>
+<p>
+a tool, to test and debug programs by providing an interface to inspect and manage program execution.
+</p>
+
+<ul>
+<li>Functions of a Debugger:
+
+<ul>
+<li><b>Breakpoints</b>: Pause execution at specific points to inspect the state.</li>
+<li><b>Step Through Code</b>: Execute code line by line to monitor behavior.</li>
+<li><b>View Variables</b>: Inspect and change variable values in real-time.</li>
+<li><b>Call Stack Inspection</b>: View the order of function calls leading to the current state.</li>
+
+</ul></li>
+
+</ul>
+
+</section>
+</section>
+<section>
+<section id="slide-org33d0a73">
+<h3 id="org33d0a73">Debuggers in C ?</h3>
+
+<div id="org91edeab" class="figure">
+<p><img src="./assets/gnu_mascot.png" alt="gnu_mascot.png" />
+</p>
+</div>
+<ul>
+<li>Popular Debugger:
+<ul>
+<li>GDB (GNU Debugger)</li>
+
+</ul></li>
+
+<li>Other Debuggers for C:
+<ul>
+<li>LLDB: Similar to GDB, developed by LLVM project.</li>
+<li>Microsoft Visual Studio Debugger: Common in Windows environments.</li>
+
+</ul></li>
+
+</ul>
+
+</section>
+</section>
+<section>
+<section id="slide-orgc1b3596">
+<h3 id="orgc1b3596">Debuggers in other languages ?</h3>
+<ul>
+<li>Python:
+
+<ul>
+<li>PDB (Python Debugger)</li>
+<li>PyCharm Debugger: Part of PyCharm IDE</li>
+
+</ul></li>
+
+<li>JavaScript:
+
+<ul>
+<li>Chrome DevTools</li>
+<li>Node.js Debugger</li>
+
+</ul></li>
+
+</ul>
+
+</section>
+</section>
+<section>
+<section id="slide-orgcffd2c0">
+<h3 id="orgcffd2c0">GDB</h3>
+<p>
+GDB, the GNU Project debugger
+</p>
+
+
+<div id="orge711ab2" class="figure">
+<p><img src="./assets/archer.svg" alt="archer.svg" class="org-svg" />
+</p>
+</div>
+
+<p>
+What Languages does GDB Support?
+Assembly, C, C++, Go, Fortran, etc
+</p>
+
+</section>
+</section>
+<section>
+<section id="slide-org83a63d8">
+<h2 id="org83a63d8">Let's use GDB (Demo)</h2>
+<p>
+Click <b><a href="https://github.com/RaMathuZen/gdb_beej_tamil/blob/main/gdb_ta.md">here</a></b> , to view the Beej's GDB guide in Tamil.
+</p>
+
+</section>
+</section>
+<section>
+<section id="slide-org3fa1ac3">
+<h3 id="org3fa1ac3">loading executables</h3>
+<div class="org-src-container">
+
+<pre   ><code class="shell" data-line-numbers='1|3'>$ gcc -g hello.c -o hello
+
+(gdb)  file hello
+
+(gdb)  r
+
+</code></pre>
+</div>
+
+</section>
+</section>
+<section>
+<section id="slide-org6f4d2de">
+<h3 id="org6f4d2de">breakpoints</h3>
+<div class="org-src-container">
+
+<pre   ><code class="shell" data-line-numbers='1|3'>(gdb)  b main
+
+(gdb)  delete 1
+
+</code></pre>
+</div>
+
+</section>
+</section>
+<section>
+<section id="slide-org14a4b9a">
+<h3 id="org14a4b9a">stepping around</h3>
+<div class="org-src-container">
+
+<pre   ><code class="shell" data-line-numbers='1|3'>(gdb)  s
+
+(gdb)  n
+
+(gdb)  c
+
+</code></pre>
+</div>
+
+</section>
+</section>
+<section>
+<section id="slide-org3ddf132">
+<h3 id="org3ddf132">examining variables</h3>
+<div class="org-src-container">
+
+<pre   ><code class="shell" data-line-numbers='1|3'>(gdb)  disp sz
+
+(gdb)  info display
+
+(gdb)  undisplay sz
+
+(gdb)  print sz
+
+(gdb)  printf "%d\n", sz
+
+</code></pre>
+</div>
+
+</section>
+</section>
+<section>
+<section id="slide-org3b25850">
+<h3 id="org3b25850">misc stuff</h3>
+<div class="outline-text-3" id="text-org3b25850">
+</div>
+</section>
+<section id="slide-orge372e49">
+<h4 id="orge372e49">Stack Manipulation</h4>
+<div class="org-src-container">
+
+<pre   ><code class="shell" data-line-numbers='1|3'>(gdb)  bt
+
+(gdb)  help stack
+
+(gdb)  undisplay sz
+
+</code></pre>
+</div>
+
+</section>
+<section id="slide-org6df5d46">
+<h4 id="org6df5d46">Additional Stepping Methods</h4>
+<div class="org-src-container">
+
+<pre   ><code class="shell" data-line-numbers='1|3'>(gdb)  finish
+
+(gdb)  help stack
+
+(gdb)  undisplay sz
+
+(gdb)  advance
+
+</code></pre>
+</div>
+
+</section>
+<section id="slide-org16dcc13">
+<h4 id="org16dcc13">jump &amp; advance</h4>
+<div class="org-src-container">
+
+<pre   ><code class="shell" data-line-numbers='1|3'>
+(gdb)  jump
+
+</code></pre>
+</div>
+
+</section>
+<section id="slide-orgf280e38">
+<h4 id="orgf280e38">Changing Variables and Values at runtime</h4>
+<div class="org-src-container">
+
+<pre   ><code class="shell" data-line-numbers='1|3'>
+(gdb)  set variable 
+
+</code></pre>
+</div>
+
+</section>
+<section id="slide-org7c06b5b">
+<h4 id="org7c06b5b">Hardware Watchpoints</h4>
+<div class="org-src-container">
+
+<pre   ><code class="shell" data-line-numbers='1|3'>
+(gdb)  watch
+
+</code></pre>
+</div>
+
+</section>
+</section>
+<section>
+<section id="slide-org723d08f">
+<h3 id="org723d08f">For more info</h3>
+<p>
+Refer <b>man gdb</b> in  your system.
+</p>
+
+<p>
+<b><a href="https://www.gnu.org/software/ddd/">Display Data Debugger (DDD)</a></b>
+</p>
+
+</section>
+</section>
+<section>
+<section id="slide-org60eefea">
+<h2 id="org60eefea">Thank you</h2>
+<div class="outline-text-2" id="text-org60eefea">
+</div>
+</section>
+</section>
+<section>
+<section id="slide-orge065356">
+<h3 id="orge065356">Request</h3>
+<ul>
+<li>Please report any mistakes or issues in the <b><a href="https://github.com/RaMathuZen/gdb_beej_tamil/blob/main/gdb_ta.md">GDB translation</a></b> to me or raise an issue there.</li>
+
+<li>Also you can contribute more by translating <b><a href="https://github.com/KaniyamFoundation/ProjectIdeas/issues/218">other Beej's books as well</a></b> as well ! (Thanks to him)</li>
+
+</ul>
+</section>
+</section>
+</div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js/dist/reveal.js"></script>
+
+<script>
+// Full list of configuration options available here:
+// https://github.com/hakimel/reveal.js#configuration
+Reveal.initialize({
+slideNumber:true,
+
+// Optional libraries used to extend on reveal.js
+dependencies: [
+ { src: 'https://cdn.jsdelivr.net/npm/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }]
+
+});
+
+</script>
+</body>
+</html>
