@@ -35,26 +35,26 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#/slide-orga8463f6">Debugging</a></li>
-<li><a href="#/slide-org83a63d8">Let's use GDB (Demo)</a></li>
-<li><a href="#/slide-org60eefea">Thank you</a></li>
+<li><a href="#/slide-org63a3871">Debugging</a></li>
+<li><a href="#/slide-org3515305">Let's use GDB (Demo)</a></li>
+<li><a href="#/slide-org62387d2">Thank you</a></li>
 </ul>
 </div>
 </div>
 </section>
 
 <section>
-<section id="slide-orga8463f6">
-<h2 id="orga8463f6">Debugging</h2>
-<div class="outline-text-2" id="text-orga8463f6">
+<section id="slide-org63a3871">
+<h2 id="org63a3871">Debugging</h2>
+<div class="outline-text-2" id="text-org63a3871">
 </div>
 </section>
 </section>
 <section>
-<section id="slide-org1a89473">
-<h3 id="org1a89473">What is Debugging ?</h3>
+<section id="slide-orgd5a5f15">
+<h3 id="orgd5a5f15">What is Debugging ?</h3>
 
-<div id="orgc259024" class="figure">
+<div id="org3985b88" class="figure">
 <p><img src="./assets/debugging1.jpg" alt="debugging1.jpg" />
 </p>
 </div>
@@ -62,8 +62,8 @@
 </section>
 </section>
 <section>
-<section id="slide-org452ebc7">
-<h3 id="org452ebc7">What is a Debugger ?</h3>
+<section id="slide-org1382441">
+<h3 id="org1382441">What is a Debugger ?</h3>
 <p>
 a tool, to test and debug programs by providing an interface to inspect and manage program execution.
 </p>
@@ -84,10 +84,10 @@ a tool, to test and debug programs by providing an interface to inspect and mana
 </section>
 </section>
 <section>
-<section id="slide-org33d0a73">
-<h3 id="org33d0a73">Debuggers in C ?</h3>
+<section id="slide-orgdb58d04">
+<h3 id="orgdb58d04">Debuggers in C ?</h3>
 
-<div id="org91edeab" class="figure">
+<div id="org20c5800" class="figure">
 <p><img src="./assets/gnu_mascot.png" alt="gnu_mascot.png" />
 </p>
 </div>
@@ -110,8 +110,8 @@ a tool, to test and debug programs by providing an interface to inspect and mana
 </section>
 </section>
 <section>
-<section id="slide-orgc1b3596">
-<h3 id="orgc1b3596">Debuggers in other languages ?</h3>
+<section id="slide-org1778ece">
+<h3 id="org1778ece">Debuggers in other languages ?</h3>
 <ul>
 <li>Python:
 
@@ -134,14 +134,14 @@ a tool, to test and debug programs by providing an interface to inspect and mana
 </section>
 </section>
 <section>
-<section id="slide-orgcffd2c0">
-<h3 id="orgcffd2c0">GDB</h3>
+<section id="slide-org84b7d1a">
+<h3 id="org84b7d1a">GDB</h3>
 <p>
 GDB, the GNU Project debugger
 </p>
 
 
-<div id="orge711ab2" class="figure">
+<div id="org522b71b" class="figure">
 <p><img src="./assets/archer.svg" alt="archer.svg" class="org-svg" />
 </p>
 </div>
@@ -154,8 +154,8 @@ Assembly, C, C++, Go, Fortran, etc
 </section>
 </section>
 <section>
-<section id="slide-org83a63d8">
-<h2 id="org83a63d8">Let's use GDB (Demo)</h2>
+<section id="slide-org3515305">
+<h2 id="org3515305">Let's use GDB (Demo)</h2>
 <p>
 Click <b><a href="https://github.com/RaMathuZen/gdb_beej_tamil/blob/main/gdb_ta.md">here</a></b> , to view the Beej's GDB guide in Tamil.
 </p>
@@ -163,8 +163,8 @@ Click <b><a href="https://github.com/RaMathuZen/gdb_beej_tamil/blob/main/gdb_ta.
 </section>
 </section>
 <section>
-<section id="slide-org3fa1ac3">
-<h3 id="org3fa1ac3">loading executables</h3>
+<section id="slide-org9788b5b">
+<h3 id="org9788b5b">loading executables</h3>
 <div class="org-src-container">
 
 <pre   ><code class="shell" data-line-numbers='1|3'>$ gcc -g hello.c -o hello
@@ -179,8 +179,8 @@ Click <b><a href="https://github.com/RaMathuZen/gdb_beej_tamil/blob/main/gdb_ta.
 </section>
 </section>
 <section>
-<section id="slide-org6f4d2de">
-<h3 id="org6f4d2de">breakpoints</h3>
+<section id="slide-orgdf32046">
+<h3 id="orgdf32046">breakpoints</h3>
 <div class="org-src-container">
 
 <pre   ><code class="shell" data-line-numbers='1|3'>(gdb)  b main
@@ -193,8 +193,8 @@ Click <b><a href="https://github.com/RaMathuZen/gdb_beej_tamil/blob/main/gdb_ta.
 </section>
 </section>
 <section>
-<section id="slide-org14a4b9a">
-<h3 id="org14a4b9a">stepping around</h3>
+<section id="slide-orgade66eb">
+<h3 id="orgade66eb">stepping around</h3>
 <div class="org-src-container">
 
 <pre   ><code class="shell" data-line-numbers='1|3'>(gdb)  s
@@ -209,8 +209,8 @@ Click <b><a href="https://github.com/RaMathuZen/gdb_beej_tamil/blob/main/gdb_ta.
 </section>
 </section>
 <section>
-<section id="slide-org3ddf132">
-<h3 id="org3ddf132">examining variables</h3>
+<section id="slide-orgd009501">
+<h3 id="orgd009501">examining variables</h3>
 <div class="org-src-container">
 
 <pre   ><code class="shell" data-line-numbers='1|3'>(gdb)  disp sz
@@ -229,54 +229,39 @@ Click <b><a href="https://github.com/RaMathuZen/gdb_beej_tamil/blob/main/gdb_ta.
 </section>
 </section>
 <section>
-<section id="slide-org3b25850">
-<h3 id="org3b25850">misc stuff</h3>
-<div class="outline-text-3" id="text-org3b25850">
+<section id="slide-orgb793021">
+<h3 id="orgb793021">misc stuff</h3>
+<div class="outline-text-3" id="text-orgb793021">
 </div>
 </section>
-<section id="slide-orge372e49">
-<h4 id="orge372e49">Stack Manipulation</h4>
+<section id="slide-org4ab0b3a">
+<h4 id="org4ab0b3a">Stack Manipulation</h4>
 <div class="org-src-container">
 
 <pre   ><code class="shell" data-line-numbers='1|3'>(gdb)  bt
 
 (gdb)  help stack
 
-(gdb)  undisplay sz
-
 </code></pre>
 </div>
 
 </section>
-<section id="slide-org6df5d46">
-<h4 id="org6df5d46">Additional Stepping Methods</h4>
+<section id="slide-org05e5297">
+<h4 id="org05e5297">Additional Stepping Methods</h4>
 <div class="org-src-container">
 
 <pre   ><code class="shell" data-line-numbers='1|3'>(gdb)  finish
 
-(gdb)  help stack
-
-(gdb)  undisplay sz
-
 (gdb)  advance
 
-</code></pre>
-</div>
-
-</section>
-<section id="slide-org16dcc13">
-<h4 id="org16dcc13">jump &amp; advance</h4>
-<div class="org-src-container">
-
-<pre   ><code class="shell" data-line-numbers='1|3'>
 (gdb)  jump
 
 </code></pre>
 </div>
 
 </section>
-<section id="slide-orgf280e38">
-<h4 id="orgf280e38">Changing Variables and Values at runtime</h4>
+<section id="slide-orgdf38ef2">
+<h4 id="orgdf38ef2">Changing Variables and Values at runtime</h4>
 <div class="org-src-container">
 
 <pre   ><code class="shell" data-line-numbers='1|3'>
@@ -286,8 +271,8 @@ Click <b><a href="https://github.com/RaMathuZen/gdb_beej_tamil/blob/main/gdb_ta.
 </div>
 
 </section>
-<section id="slide-org7c06b5b">
-<h4 id="org7c06b5b">Hardware Watchpoints</h4>
+<section id="slide-org0d91329">
+<h4 id="org0d91329">Hardware Watchpoints</h4>
 <div class="org-src-container">
 
 <pre   ><code class="shell" data-line-numbers='1|3'>
@@ -299,8 +284,8 @@ Click <b><a href="https://github.com/RaMathuZen/gdb_beej_tamil/blob/main/gdb_ta.
 </section>
 </section>
 <section>
-<section id="slide-org723d08f">
-<h3 id="org723d08f">For more info</h3>
+<section id="slide-org6d16672">
+<h3 id="org6d16672">For more info</h3>
 <p>
 Refer <b>man gdb</b> in  your system.
 </p>
@@ -312,15 +297,15 @@ Refer <b>man gdb</b> in  your system.
 </section>
 </section>
 <section>
-<section id="slide-org60eefea">
-<h2 id="org60eefea">Thank you</h2>
-<div class="outline-text-2" id="text-org60eefea">
+<section id="slide-org62387d2">
+<h2 id="org62387d2">Thank you</h2>
+<div class="outline-text-2" id="text-org62387d2">
 </div>
 </section>
 </section>
 <section>
-<section id="slide-orge065356">
-<h3 id="orge065356">Request</h3>
+<section id="slide-orgad10d95">
+<h3 id="orgad10d95">Request</h3>
 <ul>
 <li>Please report any mistakes or issues in the <b><a href="https://github.com/RaMathuZen/gdb_beej_tamil/blob/main/gdb_ta.md">GDB translation</a></b> to me or raise an issue there.</li>
 

@@ -121,8 +121,6 @@ Click *[[https://github.com/RaMathuZen/gdb_beej_tamil/blob/main/gdb_ta.md][here]
 
   (gdb)  help stack
 
-  (gdb)  undisplay sz
-
 #+END_SRC
 
 *** Additional Stepping Methods
@@ -131,18 +129,7 @@ Click *[[https://github.com/RaMathuZen/gdb_beej_tamil/blob/main/gdb_ta.md][here]
 #+BEGIN_SRC shell
   (gdb)  finish
 
-  (gdb)  help stack
-
-  (gdb)  undisplay sz
-
   (gdb)  advance
-
-#+END_SRC
-
-*** jump & advance
-
-#+ATTR_REVEAL: :code_attribs data-line-numbers='1|3'
-#+BEGIN_SRC shell
 
   (gdb)  jump
 
