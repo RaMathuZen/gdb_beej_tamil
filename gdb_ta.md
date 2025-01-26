@@ -42,7 +42,7 @@ debugger -  நிறல் பிழைத்திருத்தி
  - [இயக்க நேரத்தில் மாறிகள் மற்றும் மதிப்புகளை மாற்றுதல் (Changing Variables and Values at Runtime) ](#varmod)
  - [வன்பொருள் கண்காணிப்பு புள்ளிகள் (Hardware Watchpoints)](#hardwatch)
  - [இயங்கும் செயல்முறையை இணைக்க (Attach a running process)](#attach)
- - [கோர்டம்ப்களைப் பயன்படுத்தி "பிந்தைய கோடு பகுப்பாய்வு செய்யுதல்" (Using Coredumps for Postmortem Analysis)](#coredump)
+ - [கோர்டம்ப்களைப் பயன்படுத்தி "பிந்தைய நிரல் பகுப்பாய்வு செய்யுதல்" (Using Coredumps for Postmortem Analysis)](#coredump)
  - [சாளர செயல்பாடுகள் (Window Functions)](#window)
  - [காட்சி பதிவேடுகள் (Display Registers) மற்றும் அசெம்ப்ளி (Assembly)](#regasm)
  - [ஒரு முன்-அமைப்பை உருவாக்குதல் (Writing a Front-End)](#frontend)
@@ -504,7 +504,7 @@ Detaching from program: /home/beej/hello, process 3490
 
 இதை மேலே உள்ள **set variable** உடன் கலக்கும் போது, உங்களுக்கு கொஞ்சம் சக்தி கிடைத்துள்ளது!
 
-<h3 id="coredump" class="pbb">கோர்டம்ப்களைப் பயன்படுத்தி "பிந்தைய கோடு பகுப்பாய்வு செய்யுதல்" (Using Coredumps for Postmortem Analysis)</h3> 
+<h3 id="coredump" class="pbb">கோர்டம்ப்களைப் பயன்படுத்தி "பிந்தைய நிரல் பகுப்பாய்வு செய்யுதல்" (Using Coredumps for Postmortem Analysis)</h3> 
 
 நீங்கள் ஒரு நிரலை உருவாக்கி(build செய்து) இயக்குகிறீர்கள்(run/execute) என்று வைத்துக்கொள்வோம், மேலும் அது சில காரணங்களுக்காக உங்கள் மீது கோர்டம்ப்களைப் (core dump) செலுத்துகிறது:       
 
